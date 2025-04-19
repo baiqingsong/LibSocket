@@ -51,7 +51,7 @@ public class LSocketUtil {
                     printWriter = new PrintWriter(new BufferedWriter(new OutputStreamWriter(mSocket.getOutputStream(), "UTF-8")), true);
                     in = new BufferedReader(new InputStreamReader(mSocket.getInputStream(), "UTF-8"));
                     receiverMsg(listener);
-                }catch (IOException e){
+                }catch (Exception e){
                     e.printStackTrace();
                     if(listener != null)
                         listener.connectFail();
